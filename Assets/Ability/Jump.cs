@@ -2,25 +2,25 @@
 
 public class Jump : MonoBehaviour
 {
-    public float JumpAcceleration;
-    public float JumpDuration;
-    // Update is called once per frame
-
-    public LayerMask layerMask; 
+    private bool jumpStarted;
 
     void Update()
     {
         var commonValues = transform.GetComponent<CommonValues>();
-        
-        var inputHorizontal = Input.GetAxis("Vertical");
-        if (Input.GetKeyDown(KeyCode.Space) && Utilities.IsGrounded(transform.GetComponent<CapsuleCollider2D>().bounds, layerMask))
+        var isInputVertical = Input.GetAxisRaw("Vertical")>0.1;
+        //jump Started
+        if (isInputVertical && Utilities.IsGrounded(transform.GetComponent<BoxCollider2D>().bounds, commonValues.LayerMask))
         {
+            jumpStarted = true;
             var tmp = commonValues.RigidBodyOfPlayer.velocity;
             commonValues.RigidBodyOfPlayer.velocity = new Vector2(tmp.x, commonValues.JumpSpeed);
-        }
-        else if (Input.GetKeyDown(KeyCode.Space))
+        } //jump continue
+        else if (jumpStarted && isInputVertical && commonValues.RigidBodyOfPlayer.velocity.y > 0)
         {
-            commonValues.RigidBodyOfPlayer.AddForce(new Vector2(0, JumpAcceleration));
+            commonValues.RigidBodyOfPlayer.AddForce(new Vector2(0, commonValues.JumpAcceleration));
         }
+        else // jump key released
+            jumpStarted = false;
+
     }
 }

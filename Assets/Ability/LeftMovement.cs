@@ -17,8 +17,7 @@ public class LeftMovement : MonoBehaviour
         var inputHorizontal = Input.GetAxis("Horizontal");
         if (inputHorizontal >= 0)
             return;
-        var movement = new Vector3(commonValues.Speed * inputHorizontal, 0, 0);
-        movement *= Time.deltaTime;
-        transform.Translate(movement);
+        var tmp = commonValues.RigidBodyOfPlayer.velocity;
+        commonValues.RigidBodyOfPlayer.velocity=new Vector2(commonValues.Speed * inputHorizontal,tmp.y);
     }
 }

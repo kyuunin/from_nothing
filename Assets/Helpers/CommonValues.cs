@@ -6,4 +6,6 @@ public class CommonValues : MonoBehaviour
 
     public float Speed;
     public float JumpSpeed;
+    public float JumpAcceleration;
+    public LayerMask LayerMask;
 }
