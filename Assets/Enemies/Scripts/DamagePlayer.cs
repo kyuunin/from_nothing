@@ -20,9 +20,9 @@ public class DamagePlayer : MonoBehaviour
 
         DamageValues.PlayerIsSafeStartTime = DateTime.Now;
 
-        DamageValues.LifeOfPlayer--;
+        DamageValues.LivesOfPlayer--;
 
-        if (DamageValues.LifeOfPlayer == 0)
+        if (DamageValues.LivesOfPlayer == 0)
             Destroy(Player);
     }
 
