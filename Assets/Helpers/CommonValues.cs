@@ -7,5 +7,6 @@ public class CommonValues : MonoBehaviour
     public float HorizontalMoveSpeed;
     public float JumpSpeed;
     public float JumpAcceleration;
+    public bool DannyDoubleD;
     public LayerMask LayerMask;
 }
