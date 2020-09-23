@@ -21,7 +21,7 @@ public class PatrolOnGround : MonoBehaviour
         if (!Utilities.IsGrounded(boundsOfEnemyCollider))
             return;
 
-        if (Utilities.IsInfrontOfAWall(boundsOfEnemyCollider))
+        if (Utilities.IsInfrontOfAWallOrThePlayer(boundsOfEnemyCollider))
             _direction *= -1;
 
         GetComponent<Rigidbody2D>().velocity = new Vector2(_direction * Speed, 0);

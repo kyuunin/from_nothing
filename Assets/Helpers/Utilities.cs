@@ -18,12 +18,19 @@ public static class Utilities {
         return raycastHit2d.collider != null;
     }
 
-    public static bool IsInfrontOfAWall(Bounds boundsCollider)
+    public static bool IsInfrontOfAWallOrThePlayer(Bounds boundsCollider)
     {
         var platformLayerMask = CommonValuesStore.CommonValues.PlatformLayerMask;
+        var playerLayerMask = CommonValuesStore.CommonValues.PlayerLayerMask;
 
-        var raycastHitRightWall = Physics2D.BoxCast(boundsCollider.center, boundsCollider.size, 0f, Vector2.right, .1f, platformLayerMask);
-        var raycastHitLeftWall = Physics2D.BoxCast(boundsCollider.center, boundsCollider.size, 0f, Vector2.left, .1f, platformLayerMask);
+        return IsInfrontOf(boundsCollider, platformLayerMask, 0.1f)
+            || IsInfrontOf(boundsCollider, playerLayerMask, 0.02f);
+    }
+
+    private static bool IsInfrontOf(Bounds boundsCollider, LayerMask layerMask, float distance)
+    {
+        var raycastHitRightWall = Physics2D.BoxCast(boundsCollider.center, boundsCollider.size, 0f, Vector2.right, distance, layerMask);
+        var raycastHitLeftWall = Physics2D.BoxCast(boundsCollider.center, boundsCollider.size, 0f, Vector2.left, distance, layerMask);
 
         return raycastHitRightWall.collider != null
             || raycastHitLeftWall.collider != null;

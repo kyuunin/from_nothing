@@ -12,6 +12,7 @@ public class CommonValues : MonoBehaviour
     public bool inDash;
     public bool DannyDirection;
     public LayerMask PlatformLayerMask;
+    public LayerMask PlayerLayerMask;
     public Collider2D ColliderOfPlayer;
     public bool duringFlameAttack;
 }
