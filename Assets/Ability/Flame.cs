@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Flame : MonoBehaviour
 {
+    public int cooldown;
     private DateTime? timer = null;
 
     [SerializeField]
@@ -17,7 +18,7 @@ public class Flame : MonoBehaviour
     void Update()
     {
         var isInputAggressive = Input.GetButtonDown("FlameAtak");
-        if ((DateTime.Now - timer).Value.TotalMilliseconds < 300)
+        if ((DateTime.Now - timer).Value.TotalMilliseconds < cooldown)
             return;
         //Jot Dora
         if (isInputAggressive)
