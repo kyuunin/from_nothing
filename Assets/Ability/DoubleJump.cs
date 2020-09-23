@@ -6,25 +6,18 @@ public class DoubleJump : MonoBehaviour
     public float doubleJumpModifier;
     private bool jumpStarted;
 
-    //on Ground??
-    private bool isGrounded()
-    {
-        var commonValues = transform.GetComponent<CommonValues>();
-        return Utilities.IsGrounded(transform.GetComponent<BoxCollider2D>().bounds, commonValues.LayerMask);
-    }
-
     void Update()
     {
         var commonValues = transform.GetComponent<CommonValues>();
-        if (isGrounded()) //reset jump
+        if (Utilities.IsGrounded()) //reset jump
         {
             jumpStarted = false;
             commonValues.DannyDoubleD = false;
         }
-        if (commonValues.inDash)
+        if (commonValues.inDash || CommonValuesStore.CommonValues.duringFlameAttack)
             return;
         //jump Started
-        if (!jumpStarted && Input.GetButtonDown("Vertical") && !isGrounded())
+        if (!jumpStarted && Input.GetButtonDown("Vertical") && !Utilities.IsGrounded())
         {
             jumpStarted = true;
             commonValues.DannyDoubleD = true;

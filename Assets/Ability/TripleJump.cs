@@ -10,7 +10,7 @@ public class TripleJump : MonoBehaviour
     private bool isGrounded()
     {
         var commonValues = transform.GetComponent<CommonValues>();
-        return Utilities.IsGrounded(transform.GetComponent<BoxCollider2D>().bounds, commonValues.LayerMask);
+        return Utilities.IsGrounded();
     }
 
     void Update()
@@ -22,7 +22,7 @@ public class TripleJump : MonoBehaviour
             timer = null;
             return;
         }
-        if (commonValues.inDash)
+        if (commonValues.inDash || CommonValuesStore.CommonValues.duringFlameAttack)
             return;
         if (commonValues.DannyDoubleD && timer == null)
         {

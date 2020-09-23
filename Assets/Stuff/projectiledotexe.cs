@@ -8,10 +8,12 @@ public class projectiledotexe : MonoBehaviour
     private int _dannyDirection;
 
     //destroy projectile and calc damage
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         //deal damage
-
+        var enemy = collision.gameObject.GetComponent<DamageEnemy>();
+        if (enemy != null)
+            enemy.TakeDamage(damage);
         //selfdestruct
         Destroy(gameObject);
     }

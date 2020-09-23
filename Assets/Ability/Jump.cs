@@ -11,11 +11,11 @@ public class Jump : MonoBehaviour
         var commonValues = transform.GetComponent<CommonValues>();
         var isInputVertical = Input.GetAxisRaw("Vertical")>0.1;
 
-        if (commonValues.inDash)
+        if (commonValues.inDash || CommonValuesStore.CommonValues.duringFlameAttack)
             return;
 
         //jump Start
-        if (isInputVertical && timer.HasValue && Utilities.IsGrounded(transform.GetComponent<BoxCollider2D>().bounds, commonValues.LayerMask) && (DateTime.Now - timer.Value).TotalMilliseconds > 30)
+        if (isInputVertical && timer.HasValue && Utilities.IsGrounded())
         {
             jumpStarted = true;
             var tmp = commonValues.RigidBodyOfPlayer.velocity;
@@ -26,7 +26,7 @@ public class Jump : MonoBehaviour
         {
             commonValues.RigidBodyOfPlayer.AddForce(new Vector2(0, commonValues.JumpAcceleration));
         }//reset jump
-        else if (!timer.HasValue && Utilities.IsGrounded(transform.GetComponent<BoxCollider2D>().bounds, commonValues.LayerMask))
+        else if (!timer.HasValue && Utilities.IsGrounded())
         {
             timer = DateTime.Now;
             jumpStarted = false;

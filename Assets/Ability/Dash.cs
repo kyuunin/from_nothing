@@ -13,6 +13,8 @@ public class Dash : MonoBehaviour
         var commonValues = transform.GetComponent<CommonValues>();
         var isInputDash = Input.GetAxisRaw("Dash") > 0.1;
         var isInputHorizontal = Input.GetAxisRaw("Horizontal");
+        if (CommonValuesStore.CommonValues.duringFlameAttack)
+            return;
 
         //start dash
         if (dashable == 1 && Input.GetButtonDown("Dash"))
@@ -28,7 +30,7 @@ public class Dash : MonoBehaviour
             var tmp = commonValues.RigidBodyOfPlayer.velocity;
             commonValues.RigidBodyOfPlayer.velocity = new Vector2(direction*commonValues.DannyDashSpeed, 0);
         }//after dash, on ground
-        else if (Utilities.IsGrounded(transform.GetComponent<BoxCollider2D>().bounds, commonValues.LayerMask))
+        else if (Utilities.IsGrounded())
         {
             dashable = 1;
             commonValues.inDash = false;
