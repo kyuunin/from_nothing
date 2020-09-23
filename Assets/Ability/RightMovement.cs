@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class RightMovement : MonoBehaviour
+public class RightMovement : MonoBehaviour, IAbility
 {
     // Update is called once per frame
     void Update()
