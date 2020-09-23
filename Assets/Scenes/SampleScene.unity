@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce0f6ba288564b0499f7d22a1c8504b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashDuration: 2000
+  dashDuration: 70
 --- !u!114 &196876984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,6 +167,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doubleJumpModifier: 0.9
+--- !u!114 &196876987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196876975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 237a83716c0b51d47b1bf796c9745e73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  friction: 10
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,7 +324,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4917904156469575283, guid: 42579b8520b2feb43a2b6e077e6a0fbd, type: 3}
       propertyPath: DannyDashSpeed
-      value: 2
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4917904156469575283, guid: 42579b8520b2feb43a2b6e077e6a0fbd, type: 3}
+      propertyPath: HorizontalMoveSpeed
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 4917904156469575291, guid: 42579b8520b2feb43a2b6e077e6a0fbd, type: 3}
       propertyPath: m_Name
