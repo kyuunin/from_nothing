@@ -10,6 +10,6 @@ public class RightMovement : MonoBehaviour
         if (inputHorizontal <= 0)
             return;
         var tmp = commonValues.RigidBodyOfPlayer.velocity;
-        commonValues.RigidBodyOfPlayer.velocity = new Vector2(commonValues.Speed * inputHorizontal, tmp.y);
+        commonValues.RigidBodyOfPlayer.velocity = new Vector2(commonValues.HorizontalMoveSpeed * inputHorizontal, tmp.y);
     }
 }
