@@ -22,7 +22,7 @@ public class TripleJump : MonoBehaviour
             timer = null;
             return;
         }
-        if (commonValues.inDash)
+        if (commonValues.inDash || CommonValuesStore.CommonValues.duringFlameAttack)
             return;
         if (commonValues.DannyDoubleD && timer == null)
         {

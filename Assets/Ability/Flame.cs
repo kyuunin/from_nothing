@@ -23,12 +23,14 @@ public class Flame : MonoBehaviour
         //Jot Dora
         if (isInputAggressive)
         {
+            if (!Utilities.IsGrounded())
+                return;
             _dannyDirection = CommonValuesStore.CommonValues.DannyDirection ? 1 : -1;
             if (_dannyDirection == -1)
-                Instantiate(projectile, CommonValuesStore.CommonValues.RigidBodyOfPlayer.transform.position + new Vector3(_dannyDirection * 0.5f, 0, 0), new Quaternion(0, 180, 0, 0));
+                Instantiate(projectile, CommonValuesStore.CommonValues.RigidBodyOfPlayer.transform.position + new Vector3(_dannyDirection * 0.7f, 0, 0), new Quaternion(0, 180, 0, 0));
 
             else
-                Instantiate(projectile, CommonValuesStore.CommonValues.RigidBodyOfPlayer.transform.position + new Vector3(_dannyDirection * 0.5f, 0, 0), Quaternion.identity);
+                Instantiate(projectile, CommonValuesStore.CommonValues.RigidBodyOfPlayer.transform.position + new Vector3(_dannyDirection * 0.7f, 0, 0), Quaternion.identity);
             timer = DateTime.Now;
         }
     }

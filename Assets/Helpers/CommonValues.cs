@@ -11,5 +11,6 @@ public class CommonValues : MonoBehaviour
     public float DannyDashSpeed;
     public bool inDash;
     public bool DannyDirection;
+    public bool duringFlameAttack;
     public LayerMask LayerMask;
 }
