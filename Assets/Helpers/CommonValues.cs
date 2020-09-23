@@ -11,5 +11,6 @@ public class CommonValues : MonoBehaviour
     public float DannyDashSpeed;
     public bool inDash;
     public bool DannyDirection;
-    public LayerMask LayerMask;
+    public LayerMask PlatformLayerMask;
+    public Collider2D ColliderOfPlayer;
 }
