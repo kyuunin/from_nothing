@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 2742638700659032743}
   - component: {fileID: 2742638700659032747}
   - component: {fileID: 695087579}
-  m_Layer: 8
-  m_Name: Blob
+  m_Layer: 0
+  m_Name: NotMoveableBlob
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
