@@ -8,5 +8,8 @@ public class CommonValues : MonoBehaviour
     public float JumpSpeed;
     public float JumpAcceleration;
     public bool DannyDoubleD;
+    public float DannyDashSpeed;
+    public bool inDash;
+    public bool DannyDirection;
     public LayerMask LayerMask;
 }

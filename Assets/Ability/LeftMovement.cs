@@ -15,9 +15,9 @@ public class LeftMovement : MonoBehaviour
     {
         var commonValues = transform.GetComponent<CommonValues>();
         var inputHorizontal = Input.GetAxis("Horizontal");
-        if (inputHorizontal >= 0)
+        if (inputHorizontal >= 0 || commonValues.inDash)
             return;
-        var tmp = commonValues.RigidBodyOfPlayer.velocity;
-        commonValues.RigidBodyOfPlayer.velocity=new Vector2(commonValues.HorizontalMoveSpeed * inputHorizontal,tmp.y);
+        commonValues.RigidBodyOfPlayer.AddForce(new Vector2(commonValues.HorizontalMoveSpeed * inputHorizontal, 0));
+        commonValues.DannyDirection = false;
     }
 }

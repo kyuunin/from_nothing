@@ -17,6 +17,8 @@ public class TripleJump : MonoBehaviour
         var commonValues = transform.GetComponent<CommonValues>();
         if (isGrounded())
             jumpStarted = false;
+        if (commonValues.inDash)
+            return;
         //jump Started
         if (!jumpStarted && commonValues.DannyDoubleD && Input.GetButtonDown("Vertical") && !isGrounded())
         {

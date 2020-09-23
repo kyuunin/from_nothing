@@ -11,6 +11,9 @@ public class Jump : MonoBehaviour
         var commonValues = transform.GetComponent<CommonValues>();
         var isInputVertical = Input.GetAxisRaw("Vertical")>0.1;
 
+        if (commonValues.inDash)
+            return;
+
         //jump Started
         if (isInputVertical && timer.HasValue && Utilities.IsGrounded(transform.GetComponent<BoxCollider2D>().bounds, commonValues.LayerMask) && (DateTime.Now - timer.Value).TotalMilliseconds > 30)
         {
