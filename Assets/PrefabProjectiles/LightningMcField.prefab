@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8314151762182910744}
   - component: {fileID: 8314151762182910747}
   - component: {fileID: 5146892605013274168}
-  - component: {fileID: 1474712217924013311}
+  - component: {fileID: -8311224915561525580}
   m_Layer: 0
   m_Name: LightningMcField
   m_TagString: Untagged
@@ -122,7 +122,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.7, y: 0.1}
   m_Direction: 1
---- !u!114 &1474712217924013311
+--- !u!114 &-8311224915561525580
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,8 +131,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 8314151762182910748}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94e626447f109ee469b453faf124383d, type: 3}
+  m_Script: {fileID: 11500000, guid: 1554a1778d440204c80a346aff6d07ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 3
-  lifeTime: 750
+  damage: 2
+  lifeTime: 1500

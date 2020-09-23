@@ -12,7 +12,6 @@ public class LightningProjectileScript : MonoBehaviour
     private void Start()
     {
         timer = DateTime.Now;
-        CommonValuesStore.CommonValues.duringFlameAttack = true;
     }
 
     //deal damage ONCE
@@ -26,9 +25,11 @@ public class LightningProjectileScript : MonoBehaviour
 
     void Update()
     {
+        //follow player
+        transform.position=CommonValuesStore.CommonValues.ColliderOfPlayer.bounds.center;
+        //destroy at end of duration
         if ((DateTime.Now - timer).Value.TotalMilliseconds > lifeTime)
         {
-            CommonValuesStore.CommonValues.duringFlameAttack = false;
             Destroy(gameObject);
         }
     }
