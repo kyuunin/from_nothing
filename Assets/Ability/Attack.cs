@@ -4,6 +4,7 @@ using UnityEngine;
 public class Attack : MonoBehaviour
 {
     private DateTime? timer = null;
+    public int cooldown;
 
     [SerializeField]
     private GameObject projectile;
@@ -17,7 +18,7 @@ public class Attack : MonoBehaviour
     void Update()
     {
         var isInputAggressive = Input.GetButtonDown("Atak");
-        if ((DateTime.Now - timer).Value.TotalMilliseconds < 300)
+        if ((DateTime.Now - timer).Value.TotalMilliseconds < cooldown)
             return;
         //Jot Dora
         if (isInputAggressive)
