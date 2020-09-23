@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using UnityEngine;
 
-public class LifeCounter : MonoBehaviour
+public class LiveCounter : MonoBehaviour
 {
     [SerializeField]
     private GameObject[] Hearts;
