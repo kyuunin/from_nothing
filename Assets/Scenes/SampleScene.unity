@@ -142,6 +142,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooldown: 750
   projectile: {fileID: 2870247757399436, guid: 12684c2bf3e33d94786277aa0372b3b2, type: 3}
+--- !u!61 &196876990 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 196876977, guid: 42579b8520b2feb43a2b6e077e6a0fbd, type: 3}
+  m_PrefabInstance: {fileID: 1807596995}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,6 +350,14 @@ PrefabInstance:
       propertyPath: cooldown
       value: 300
       objectReference: {fileID: 0}
+    - target: {fileID: 4917904156469575283, guid: 42579b8520b2feb43a2b6e077e6a0fbd, type: 3}
+      propertyPath: PlatformLayerMask.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 4917904156469575283, guid: 42579b8520b2feb43a2b6e077e6a0fbd, type: 3}
+      propertyPath: ColliderOfPlayer
+      value: 
+      objectReference: {fileID: 196876990}
     - target: {fileID: 4917904156469575291, guid: 42579b8520b2feb43a2b6e077e6a0fbd, type: 3}
       propertyPath: m_Name
       value: Player
