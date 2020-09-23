@@ -25,6 +25,7 @@ public class Flame : MonoBehaviour
         {
             if (!Utilities.IsGrounded())
                 return;
+            CommonValuesStore.CommonValues.RigidBodyOfPlayer.velocity = new Vector2(0, 0);
             _dannyDirection = CommonValuesStore.CommonValues.DannyDirection ? 1 : -1;
             if (_dannyDirection == -1)
                 Instantiate(projectile, CommonValuesStore.CommonValues.RigidBodyOfPlayer.transform.position + new Vector3(_dannyDirection * 0.7f, 0, 0), new Quaternion(0, 180, 0, 0));
