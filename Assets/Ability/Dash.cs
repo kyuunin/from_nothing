@@ -27,12 +27,12 @@ public class Dash : MonoBehaviour
         {
             var tmp = commonValues.RigidBodyOfPlayer.velocity;
             commonValues.RigidBodyOfPlayer.velocity = new Vector2(direction*commonValues.DannyDashSpeed, 0);
-        }
+        }//after dash, on ground
         else if (Utilities.IsGrounded(transform.GetComponent<BoxCollider2D>().bounds, commonValues.LayerMask))
         {
             dashable = 1;
             commonValues.inDash = false;
-        }
+        }//a
         else
         {
             commonValues.inDash = false;

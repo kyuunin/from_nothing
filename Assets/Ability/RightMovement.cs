@@ -2,7 +2,6 @@
 
 public class RightMovement : MonoBehaviour
 {
-    // Update is called once per frame
     void Update()
     {
         var commonValues = transform.GetComponent<CommonValues>();

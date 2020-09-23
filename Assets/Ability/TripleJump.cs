@@ -15,7 +15,7 @@ public class TripleJump : MonoBehaviour
     void Update()
     {
         var commonValues = transform.GetComponent<CommonValues>();
-        if (isGrounded())
+        if (isGrounded()) //reset jump
             jumpStarted = false;
         if (commonValues.inDash)
             return;

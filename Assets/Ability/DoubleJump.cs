@@ -6,6 +6,7 @@ public class DoubleJump : MonoBehaviour
     public float doubleJumpModifier;
     private bool jumpStarted;
 
+    //on Ground??
     private bool isGrounded()
     {
         var commonValues = transform.GetComponent<CommonValues>();
@@ -15,7 +16,7 @@ public class DoubleJump : MonoBehaviour
     void Update()
     {
         var commonValues = transform.GetComponent<CommonValues>();
-        if (isGrounded())
+        if (isGrounded()) //reset jump
         {
             jumpStarted = false;
             commonValues.DannyDoubleD = false;
