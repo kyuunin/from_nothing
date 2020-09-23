@@ -324,7 +324,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4917904156469575283, guid: 42579b8520b2feb43a2b6e077e6a0fbd, type: 3}
       propertyPath: DannyDashSpeed
-      value: 15
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4917904156469575283, guid: 42579b8520b2feb43a2b6e077e6a0fbd, type: 3}
       propertyPath: HorizontalMoveSpeed
