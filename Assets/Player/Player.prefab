@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 196876988}
   - component: {fileID: 196876989}
   - component: {fileID: 196876977}
+  - component: {fileID: 6218702710075273548}
+  - component: {fileID: 6719919804284376528}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -171,9 +173,11 @@ MonoBehaviour:
   DannyDashSpeed: 13
   inDash: 0
   DannyDirection: 0
-  LayerMask:
+  PlatformLayerMask:
     serializedVersion: 2
     m_Bits: 256
+  ColliderOfPlayer: {fileID: 196876977}
+  duringFlameAttack: 0
 --- !u!114 &196876976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,6 +242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f517a0f2d50dd924c95fffb808aae6d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cooldown: 300
   projectile: {fileID: 7428395153352802273, guid: 64e9e002cf888994ea6bbb1ea1dd0030, type: 3}
 --- !u!114 &196876989
 MonoBehaviour:
@@ -277,3 +282,31 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.23, y: 4}
   m_EdgeRadius: 0
+--- !u!114 &6218702710075273548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4917904156469575291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28ce966a92855be44a99d68b206e6299, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 750
+  projectile: {fileID: 2870247757399436, guid: 12684c2bf3e33d94786277aa0372b3b2, type: 3}
+--- !u!114 &6719919804284376528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4917904156469575291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 112246c83239e6d4d9804eb68be17d80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 0
+  projectile: {fileID: 8314151762182910748, guid: 7cda717033feabf4e9683d8bd039c1c5, type: 3}
