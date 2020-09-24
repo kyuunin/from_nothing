@@ -1,13 +1,15 @@
 ﻿using System;
 using UnityEngine;
 
-public class ThrowPoisonousFogProjectile : MonoBehaviour
+public abstract class ThrowProjectile : MonoBehaviour
 {
+    protected abstract Vector3 SpanPosition { get; }
+
     [SerializeField]
     private int DurationForNextThrow;
 
     [SerializeField]
-    private GameObject PoisonousFogProjectilePrefab;
+    private GameObject ProjectilePrefab;
 
     private DateTime? _timer;
 
@@ -19,6 +21,6 @@ public class ThrowPoisonousFogProjectile : MonoBehaviour
 
         _timer = DateTime.Now;
 
-        Instantiate(PoisonousFogProjectilePrefab, transform.position - new Vector3(0f, 1f), Quaternion.identity);
+        Instantiate(ProjectilePrefab, transform.position + SpanPosition, Quaternion.identity);
     }
 }
