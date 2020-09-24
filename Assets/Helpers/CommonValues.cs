@@ -15,4 +15,5 @@ public class CommonValues : MonoBehaviour
     public LayerMask PlayerLayerMask;
     public Collider2D ColliderOfPlayer;
     public bool duringFlameAttack;
+    public int GroundCollapseTiem;
 }
