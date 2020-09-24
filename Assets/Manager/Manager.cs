@@ -18,6 +18,8 @@ public class Manager : MonoBehaviour
         _saved.SetActive(true);
         _active = Instantiate(_saved);
         _saved.SetActive(false);
+
+        UpdateValuesStore();
     }
 
     // Start is called before the first frame update
@@ -44,8 +46,6 @@ public class Manager : MonoBehaviour
         {
             Create();
         }
-
-        UpdateValuesStore();
     }
 
     private void UpdateValuesStore()
