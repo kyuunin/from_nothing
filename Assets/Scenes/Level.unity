@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 278118283}
   - component: {fileID: 278118285}
   - component: {fileID: 278118284}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: jump
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -549,7 +549,7 @@ GameObject:
   - component: {fileID: 1492720603}
   - component: {fileID: 1492720604}
   - component: {fileID: 1492720605}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -668,7 +668,7 @@ GameObject:
   - component: {fileID: 1690252315}
   - component: {fileID: 1690252317}
   - component: {fileID: 1690252316}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -857,6 +857,10 @@ PrefabInstance:
     - target: {fileID: 4917904156469575291, guid: 42579b8520b2feb43a2b6e077e6a0fbd, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4917904156469575291, guid: 42579b8520b2feb43a2b6e077e6a0fbd, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4917904156469575292, guid: 42579b8520b2feb43a2b6e077e6a0fbd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3871,7 +3875,7 @@ GameObject:
   - component: {fileID: 1986482503}
   - component: {fileID: 1986482505}
   - component: {fileID: 1986482504}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
