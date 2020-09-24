@@ -30,18 +30,18 @@
        inkscape:menu="Textures"
        inkscape:label="Felt"
        style="color-interpolation-filters:sRGB;"
-       id="filter1238">
+       id="filter1829">
       <feGaussianBlur
          result="result1"
          in="SourceGraphic"
          stdDeviation="2"
-         id="feGaussianBlur1224" />
+         id="feGaussianBlur1815" />
       <feTurbulence
          result="result0"
          numOctaves="5"
          baseFrequency="0.05"
          type="fractalNoise"
-         id="feTurbulence1226" />
+         id="feTurbulence1817" />
       <feDisplacementMap
          result="result2"
          scale="20"
@@ -49,12 +49,12 @@
          xChannelSelector="R"
          in="result1"
          in2="result0"
-         id="feDisplacementMap1228" />
+         id="feDisplacementMap1819" />
       <feGaussianBlur
          result="result4"
          in="result2"
          stdDeviation="5"
-         id="feGaussianBlur1230" />
+         id="feGaussianBlur1821" />
       <feComposite
          result="result6"
          k1="1"
@@ -63,19 +63,19 @@
          in="result0"
          in2="result4"
          operator="arithmetic"
-         id="feComposite1232" />
+         id="feComposite1823" />
       <feComposite
          in="result6"
          in2="result0"
          operator="in"
          result="result91"
-         id="feComposite1234" />
+         id="feComposite1825" />
       <feComposite
          operator="arithmetic"
          k1="1.5"
          in="result2"
          in2="result91"
-         id="feComposite1236" />
+         id="feComposite1827" />
     </filter>
   </defs>
   <sodipodi:namedview
@@ -85,9 +85,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="451.25073"
-     inkscape:cy="587.78401"
+     inkscape:zoom="0.9899495"
+     inkscape:cx="566.99441"
+     inkscape:cy="571.74243"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -104,7 +104,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -112,48 +112,12 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <g
-       id="g830"
-       style="filter:url(#filter1238)">
-      <rect
-         y="120.06757"
-         x="79.646324"
-         height="36.883194"
-         width="40.625"
-         id="rect3713"
-         style="fill:#24221c;stroke-width:0.26458332;fill-opacity:1" />
-      <rect
-         transform="rotate(-26.719916)"
-         y="151.33731"
-         x="17.617933"
-         height="1.6036172"
-         width="9.0871639"
-         id="rect3719"
-         style="fill:#ffffff;stroke-width:0.26458332" />
-      <rect
-         inkscape:transform-center-y="1.889881"
-         inkscape:transform-center-x="-2.6458333"
-         transform="rotate(-63.941895)"
-         y="139.26205"
-         x="-65.544144"
-         height="1.6036172"
-         width="9.0871639"
-         id="rect3719-3"
-         style="fill:#24221c;stroke-width:0.26458332;fill-opacity:1" />
-      <ellipse
-         ry="1.6063988"
-         rx="1.7008928"
-         cy="111.47039"
-         cx="101.10861"
-         id="path3736"
-         style="fill:#24221c;stroke-width:0.26458332;fill-opacity:1" />
-      <rect
-         y="139.95088"
-         x="79.598"
-         height="5.2916665"
-         width="9.4160004"
-         id="rect3738"
-         style="fill:#ffffff;stroke-width:0.26679668" />
-    </g>
+    <rect
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke-width:1.44099998;stroke-miterlimit:4;stroke-dasharray:none;filter:url(#filter1829)"
+       id="rect1813"
+       width="27.395124"
+       height="23.920622"
+       x="81.116295"
+       y="121.13666" />
   </g>
 </svg>

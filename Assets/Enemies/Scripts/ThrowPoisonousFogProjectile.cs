@@ -9,9 +9,6 @@ public class ThrowPoisonousFogProjectile : MonoBehaviour
     [SerializeField]
     private GameObject PoisonousFogProjectilePrefab;
 
-    [SerializeField]
-    private GameObject Player;
-
     private DateTime? _timer;
 
     // Update is called once per frame
