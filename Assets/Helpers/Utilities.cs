@@ -18,13 +18,11 @@ public static class Utilities {
         return raycastHit2d.collider != null;
     }
 
-    public static bool IsInfrontOfAWallOrThePlayer(Bounds boundsCollider)
+    public static bool IsInfrontOfAWall(Bounds boundsCollider)
     {
         var platformLayerMask = CommonValuesStore.CommonValues.PlatformLayerMask;
-        var playerLayerMask = CommonValuesStore.CommonValues.PlayerLayerMask;
 
-        return IsInfrontOf(boundsCollider, platformLayerMask, 0.1f)
-            || IsInfrontOf(boundsCollider, playerLayerMask, 0.02f);
+        return IsInfrontOf(boundsCollider, platformLayerMask, 0.02f);
     }
 
     private static bool IsInfrontOf(Bounds boundsCollider, LayerMask layerMask, float distance)

@@ -21,15 +21,12 @@ public class BombProjectileScript : MonoBehaviour
     //destroy projectile and calc damage
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log(collision.gameObject.layer);
         if (collision.gameObject.layer == 9 || collision.gameObject.layer == 8)
         {
             if (collision.gameObject.layer == 8)
                 GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
             return;
         }
-
-        Debug.Log(collision);
         //deal damage
         //explosion
         GetComponent<CircleCollider2D>().radius = radius;

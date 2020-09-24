@@ -27,21 +27,23 @@ public class BombThrow : MonoBehaviour
         {
             Vector2 velo;
             //top right
-            if (Input.GetAxisRaw("Aim") > 0.1)
+            if (Input.GetAxisRaw("Aim") > 0.1) { 
                 velo = new Vector2(1, 2);
-            else if (Input.GetAxisRaw("Aim") < -0.1)
+                velo *= throwStrength;
+            }
+            else if (Input.GetAxisRaw("Aim") < -0.1) { 
                 velo = new Vector2(0, 0);
-            else
+            }
+            else {
                 velo = new Vector2(1, 0);
-            velo *= throwStrength;
+                velo *= throwStrength;
+            }
+            
             _dannyDirection = CommonValuesStore.CommonValues.DannyDirection ? 1 : -1;
             if (_dannyDirection == -1) {
                 velo.x *= -1;
-                bomb = Instantiate(projectile, CommonValuesStore.CommonValues.RigidBodyOfPlayer.transform.position + new Vector3(_dannyDirection * 0.5f, 0, 0), new Quaternion(0, 180, 0, 0));
             }
-            else {
-                bomb= Instantiate(projectile, CommonValuesStore.CommonValues.RigidBodyOfPlayer.transform.position + new Vector3(_dannyDirection * 0.5f, 0, 0), Quaternion.identity);
-            }
+            bomb = Instantiate(projectile, CommonValuesStore.CommonValues.RigidBodyOfPlayer.transform.position + new Vector3(_dannyDirection * 0.5f, 0.3f, 0), Quaternion.identity);
             bomb.GetComponent<Rigidbody2D>().velocity = velo;
             timer = DateTime.Now;
         }

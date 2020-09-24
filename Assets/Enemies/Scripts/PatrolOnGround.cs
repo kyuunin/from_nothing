@@ -7,10 +7,12 @@ public class PatrolOnGround : MonoBehaviour
 
     private int _direction = 1;
 
-    // Start is called before the first frame update
-    void Start()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        if (collision.gameObject.layer != Layer.PlayerLayer)
+            return;
+
+        _direction *= -1;
     }
 
     // Update is called once per frame
@@ -21,7 +23,7 @@ public class PatrolOnGround : MonoBehaviour
         if (!Utilities.IsGrounded(boundsOfEnemyCollider))
             return;
 
-        if (Utilities.IsInfrontOfAWallOrThePlayer(boundsOfEnemyCollider))
+        if (Utilities.IsInfrontOfAWall(boundsOfEnemyCollider))
             _direction *= -1;
 
         GetComponent<Rigidbody2D>().velocity = new Vector2(_direction * Speed, 0);
