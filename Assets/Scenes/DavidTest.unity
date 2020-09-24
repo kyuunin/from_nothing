@@ -370,26 +370,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 498396174962132696, guid: ed8f0992fa67f7949adf7d41ca07d931, type: 3}
   m_PrefabInstance: {fileID: 498396175522589036}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1688298966 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8695377548392596259, guid: 604581856ec62f64ab28d13d2ddc5603, type: 3}
-  m_PrefabInstance: {fileID: 8695377546708543221}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1688298967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1688298966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce1c0f4ec5766dc40926598c31a0f321, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DurationForNextThrow: 2000
-  PoisonousFogProjectilePrefab: {fileID: 8687002736940470597, guid: b4301d9a905a1f54cb0249f00118b0f1, type: 3}
-  Player: {fileID: 196876975}
 --- !u!1 &1741695831 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 734006364120569396, guid: ed8f0992fa67f7949adf7d41ca07d931, type: 3}
@@ -3280,29 +3260,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1688298968, guid: 604581856ec62f64ab28d13d2ddc5603, type: 3}
-      propertyPath: Speed
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1688298968, guid: 604581856ec62f64ab28d13d2ddc5603, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 1688298973, guid: 604581856ec62f64ab28d13d2ddc5603, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 196876975}
+    - target: {fileID: 7483034486124249871, guid: 604581856ec62f64ab28d13d2ddc5603, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 196876975}
     - target: {fileID: 8695377548392596259, guid: 604581856ec62f64ab28d13d2ddc5603, type: 3}
       propertyPath: m_Name
       value: FogEnemy
       objectReference: {fileID: 0}
-    - target: {fileID: 8695377548392596259, guid: 604581856ec62f64ab28d13d2ddc5603, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8695377548392596269, guid: 604581856ec62f64ab28d13d2ddc5603, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.843
+      value: -2.11
       objectReference: {fileID: 0}
     - target: {fileID: 8695377548392596269, guid: 604581856ec62f64ab28d13d2ddc5603, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.583
+      value: -0.44
       objectReference: {fileID: 0}
     - target: {fileID: 8695377548392596269, guid: 604581856ec62f64ab28d13d2ddc5603, type: 3}
       propertyPath: m_LocalPosition.z
