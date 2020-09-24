@@ -829,6 +829,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.58
       objectReference: {fileID: 0}
+    - target: {fileID: 2742638700659032743, guid: 9f84debe0991ec045aeb33bf0918df0a, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 2120366422}
     - target: {fileID: 2742638700659032744, guid: 9f84debe0991ec045aeb33bf0918df0a, type: 3}
       propertyPath: m_Name
       value: Blob
