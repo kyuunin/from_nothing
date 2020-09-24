@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 1688298967}
   - component: {fileID: 1688298969}
   - component: {fileID: 1688298968}
-  m_Layer: 0
+  - component: {fileID: 7483034486124249871}
+  m_Layer: 12
   m_Name: FogEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,4 +145,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a2cf78ce4114364b99be5c62748033f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 2
+  Speed: 1.5
+--- !u!114 &7483034486124249871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8695377548392596259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce1c0f4ec5766dc40926598c31a0f321, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DurationForNextThrow: 1500
+  PoisonousFogProjectilePrefab: {fileID: 8687002736940470597, guid: b4301d9a905a1f54cb0249f00118b0f1, type: 3}
+  Player: {fileID: 0}

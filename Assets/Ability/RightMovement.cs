@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class RightMovement : MonoBehaviour, IAbility
+public class RightMovement : MonoBehaviour
 {
     void Update()
     {

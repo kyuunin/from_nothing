@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class DamagePlayer : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject Player;
+    public GameObject Player;
     public int Damage = 1;
+
     private bool _isInPlayerCollision = false;
 
     // Update is called once per frame
