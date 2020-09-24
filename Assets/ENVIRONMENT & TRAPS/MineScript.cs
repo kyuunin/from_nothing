@@ -5,7 +5,6 @@ public class MineScript : MonoBehaviour
 {
 
     public int damage;
-    public GameObject Player;
 
     private DateTime? timer = null;
     private Vector2 bounds;
@@ -28,6 +27,10 @@ public class MineScript : MonoBehaviour
         }
         //deal damage
         if (collision.gameObject.layer == 9) {
+            //explosion
+            GetComponent<BoxCollider2D>().size = bounds;
+            //selfdestruct
+            explodedTimer = DateTime.Now;
             //player takes damage
             if (DamageValues.PlayerIsSafeStartTime.HasValue
                 && (DateTime.Now - DamageValues.PlayerIsSafeStartTime.Value) < DamageValues.PlayerIsSafeTimeSpan)
@@ -38,16 +41,12 @@ public class MineScript : MonoBehaviour
             DamageValues.LivesOfPlayer -= damage;
 
             if (DamageValues.LivesOfPlayer <= 0)
-                Destroy(Player);
+                Destroy(ValuesStore.Player);
 
             //damage enemies too
             var enemy = collision.gameObject.GetComponent<DamageEnemy>();
             if (enemy != null)
                 enemy.TakeDamage(damage);
-            //explosion
-            GetComponent<BoxCollider2D>().size = bounds;
-        //selfdestruct
-        explodedTimer = DateTime.Now;
         }
     }
 
