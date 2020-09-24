@@ -22,15 +22,22 @@ public static class Utilities {
     {
         var platformLayerMask = ValuesStore.CommonValues.PlatformLayerMask;
 
-        return IsInfrontOf(boundsCollider, platformLayerMask, 0.02f);
+        return IsInfrontOf(boundsCollider, platformLayerMask, 0.02f, Vector2.right, Vector2.left);
     }
 
-    private static bool IsInfrontOf(Bounds boundsCollider, LayerMask layerMask, float distance)
+    public static bool IsAtTheGroundOrAtTheRoof(Bounds boundsCollider)
     {
-        var raycastHitRightWall = Physics2D.BoxCast(boundsCollider.center, boundsCollider.size, 0f, Vector2.right, distance, layerMask);
-        var raycastHitLeftWall = Physics2D.BoxCast(boundsCollider.center, boundsCollider.size, 0f, Vector2.left, distance, layerMask);
+        var platformLayerMask = ValuesStore.CommonValues.PlatformLayerMask;
 
-        return raycastHitRightWall.collider != null
-            || raycastHitLeftWall.collider != null;
+        return IsInfrontOf(boundsCollider, platformLayerMask, 0.02f, Vector2.up, Vector2.down);
+    }
+
+    private static bool IsInfrontOf(Bounds boundsCollider, LayerMask layerMask, float distance, Vector2 firstDirection, Vector2 secondDirection)
+    {
+        var raycastHitAtFirstDirection = Physics2D.BoxCast(boundsCollider.center, boundsCollider.size, 0f, firstDirection, distance, layerMask);
+        var raycastHitAtSecondDirection = Physics2D.BoxCast(boundsCollider.center, boundsCollider.size, 0f, secondDirection, distance, layerMask);
+
+        return raycastHitAtFirstDirection.collider != null
+            || raycastHitAtSecondDirection.collider != null;
     }
 }
