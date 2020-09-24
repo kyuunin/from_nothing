@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class ButonController : MonoBehaviour
 {
-    public GameObject Door;
+    public DoorOpener Door;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Door.GetComponent<DoorOpener>().SetOpen(true);
+        Door.SetOpen(true);
     }
 }
