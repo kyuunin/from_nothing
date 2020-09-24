@@ -15,9 +15,9 @@ TagManager:
   - 
   - Platforms
   - PlayerLayer
-  - Orb
   - 
-  - 
+  - BombLayer
+  - EnemyLayer
   - 
   - 
   - 

@@ -128,21 +128,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4917904156469575291, guid: 42579b8520b2feb43a2b6e077e6a0fbd, type: 3}
   m_PrefabInstance: {fileID: 1807596995}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &196876976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 196876975}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f9bca457223ad34eba3c61d6c06ebbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cooldown: 5000
-  throwStrength: 5.5
-  projectile: {fileID: 2841395958556001088, guid: 68b46d58f6a464141964ac82946be1bd, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,10 +383,6 @@ PrefabInstance:
     - target: {fileID: 4917904156469575291, guid: 42579b8520b2feb43a2b6e077e6a0fbd, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 4917904156469575291, guid: 42579b8520b2feb43a2b6e077e6a0fbd, type: 3}
-      propertyPath: m_Layer
-      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4917904156469575292, guid: 42579b8520b2feb43a2b6e077e6a0fbd, type: 3}
       propertyPath: m_LocalPosition.x

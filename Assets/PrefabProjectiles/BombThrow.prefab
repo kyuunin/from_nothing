@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2841395958556001095}
   - component: {fileID: 7856602455582918963}
   - component: {fileID: -837041580342498715}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: BombThrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,6 +133,6 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.02, y: -0.12}
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 0.53

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3295006057514872889}
   - component: {fileID: 843855180767445833}
   - component: {fileID: 8564981005994497056}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: MoveableBlob
   m_TagString: Untagged
   m_Icon: {fileID: 0}
