@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class DamagePlayer : MonoBehaviour
 {
-    public GameObject Player;
     public int Damage = 1;
 
     private bool _isInPlayerCollision = false;
@@ -14,26 +13,26 @@ public class DamagePlayer : MonoBehaviour
         if (!_isInPlayerCollision)
             return;
 
-        if (ValuesStore.CommonValues.PlayerIsSafeStartTime.HasValue
-            && (DateTime.Now - ValuesStore.CommonValues.PlayerIsSafeStartTime.Value) < DamageValues.PlayerIsSafeTimeSpan)
+        if (DamageValues.PlayerIsSafeStartTime.HasValue
+            && (DateTime.Now - DamageValues.PlayerIsSafeStartTime.Value) < DamageValues.PlayerIsSafeTimeSpan)
             return;
 
-        ValuesStore.CommonValues.PlayerIsSafeStartTime = DateTime.Now;
+        DamageValues.PlayerIsSafeStartTime = DateTime.Now;
 
-        ValuesStore.CommonValues.LivesOfPlayer-=Damage;
+        DamageValues.LivesOfPlayer -= Damage;
 
-        if (ValuesStore.CommonValues.LivesOfPlayer <= 0)
-            ValuesStore.Manager.Reload();
+        if (DamageValues.LivesOfPlayer <= 0)
+            Destroy(ValuesStore.Player);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        _isInPlayerCollision = collision.gameObject == Player;
+        _isInPlayerCollision = collision.gameObject == ValuesStore.Player;
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject == Player)
+        if (collision.gameObject == ValuesStore.Player)
             _isInPlayerCollision = false;
     }
 }

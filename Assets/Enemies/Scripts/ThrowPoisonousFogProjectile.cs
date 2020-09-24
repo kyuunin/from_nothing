@@ -14,11 +14,6 @@ public class ThrowPoisonousFogProjectile : MonoBehaviour
 
     private DateTime? _timer;
 
-    private void Start()
-    {
-        PoisonousFogProjectilePrefab.GetComponent<DamagePlayer>().Player = Player;
-    }
-
     // Update is called once per frame
     private void Update()
     {
