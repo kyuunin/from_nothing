@@ -17,7 +17,7 @@ public class DoorOpener : MonoBehaviour
         render.sprite = IsOpen ? OpenSprite : ClosedSprite;
         collider.enabled = !IsOpen;
     }
-    public void SetOpen(bool open) {
+    public virtual void SetOpen(bool open) {
         IsOpen = open;
         render.sprite = IsOpen ? OpenSprite : ClosedSprite;
         collider.enabled = !IsOpen;
