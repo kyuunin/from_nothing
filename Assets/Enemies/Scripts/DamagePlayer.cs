@@ -5,7 +5,7 @@ public class DamagePlayer : MonoBehaviour
 {
     [SerializeField]
     private GameObject Player;
-
+    public int Damage = 1;
     private bool _isInPlayerCollision = false;
 
     // Update is called once per frame
@@ -20,9 +20,9 @@ public class DamagePlayer : MonoBehaviour
 
         DamageValues.PlayerIsSafeStartTime = DateTime.Now;
 
-        DamageValues.LivesOfPlayer--;
+        DamageValues.LivesOfPlayer-=Damage;
 
-        if (DamageValues.LivesOfPlayer == 0)
+        if (DamageValues.LivesOfPlayer <= 0)
             Destroy(Player);
     }
 
