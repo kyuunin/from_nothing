@@ -162,7 +162,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DurationForNextThrow: 1500
   PoisonousFogProjectilePrefab: {fileID: 8687002736940470597, guid: b4301d9a905a1f54cb0249f00118b0f1, type: 3}
-  Player: {fileID: 0}
 --- !u!114 &1688298973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,7 +174,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67b95cacd4a3fa9488ab46c1afc2045f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
   Damage: 1
 --- !u!114 &1688298974
 MonoBehaviour:
