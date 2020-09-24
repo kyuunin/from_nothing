@@ -46,7 +46,7 @@ public class MineScript : MonoBehaviour
             //damage enemies too
             var enemy = collision.gameObject.GetComponent<DamageEnemy>();
             if (enemy != null)
-                enemy.TakeDamage(damage);
+                enemy.TakeDamage(damage, AttackType.Explosion);
         }
     }
 

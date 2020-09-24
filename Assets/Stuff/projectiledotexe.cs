@@ -13,7 +13,7 @@ public class projectiledotexe : MonoBehaviour
         //deal damage
         var enemy = collision.gameObject.GetComponent<DamageEnemy>();
         if (enemy != null)
-            enemy.TakeDamage(damage);
+            enemy.TakeDamage(damage, AttackType.Default);
         //selfdestruct
         Destroy(gameObject);
     }

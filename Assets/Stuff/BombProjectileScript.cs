@@ -6,7 +6,6 @@ public class BombProjectileScript : MonoBehaviour
     public int damage;
     public int lifetime;
 
-    private int _dannyDirection;
     private DateTime? timer = null;
     private float radius;
     private DateTime? explodedTimer = null;
@@ -14,31 +13,40 @@ public class BombProjectileScript : MonoBehaviour
     private void Start()
     {
         timer = DateTime.Now;
-        _dannyDirection = ValuesStore.CommonValues.DannyDirection ? 1 : -1;
         radius = GetComponent<CircleCollider2D>().radius * 2;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        OnCollisionOrTriggerEnter(collision.gameObject);
     }
 
     //destroy projectile and calc damage
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == 9 || collision.gameObject.layer == 8)
+        OnCollisionOrTriggerEnter(collision.gameObject);
+    }
+
+    private void OnCollisionOrTriggerEnter(GameObject gameObject)
+    {
+        if (gameObject.layer == 9 || gameObject.layer == 8)
         {
-            if (collision.gameObject.layer == 8)
-                GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
+            if (gameObject.layer == 8)
+                GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
             return;
         }
         //deal damage
         //explosion
         GetComponent<CircleCollider2D>().radius = radius;
-        var enemy = collision.gameObject.GetComponent<DamageEnemy>();
+        var enemy = gameObject.GetComponent<DamageEnemy>();
         if (enemy != null)
-            enemy.TakeDamage(damage);
+            enemy.TakeDamage(damage, AttackType.Explosion);
         //selfdestruct
         explodedTimer = DateTime.Now;
     }
 
     // shoot it, bop it, drop it
-    void Update()
+    private void Update()
     {
         if (explodedTimer != null && (DateTime.Now - explodedTimer).Value.TotalMilliseconds > 50)
             Destroy(gameObject);

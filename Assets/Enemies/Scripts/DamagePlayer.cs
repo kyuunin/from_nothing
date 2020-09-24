@@ -8,7 +8,7 @@ public class DamagePlayer : MonoBehaviour
     private bool _isInPlayerCollision = false;
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (!_isInPlayerCollision)
             return;
@@ -25,15 +25,25 @@ public class DamagePlayer : MonoBehaviour
             ValuesStore.Manager.Reload();
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        _isInPlayerCollision = collision.gameObject.layer == Layer.PlayerLayer;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == Layer.PlayerLayer)
+            _isInPlayerCollision = false;
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-    
-        _isInPlayerCollision = collision.gameObject == ValuesStore.Player;
+        _isInPlayerCollision = collision.gameObject.layer == Layer.PlayerLayer;
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject == ValuesStore.Player)
+        if (collision.gameObject.layer == Layer.PlayerLayer)
             _isInPlayerCollision = false;
     }
 }

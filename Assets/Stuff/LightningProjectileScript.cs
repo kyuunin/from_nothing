@@ -20,7 +20,7 @@ public class LightningProjectileScript : MonoBehaviour
         //deal damage
         var enemy = collision.gameObject.GetComponent<DamageEnemy>();
         if (enemy != null)
-            enemy.TakeDamage(damage);
+            enemy.TakeDamage(damage, AttackType.Electro);
     }
 
     void Update()

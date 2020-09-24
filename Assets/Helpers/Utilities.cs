@@ -29,7 +29,7 @@ public static class Utilities {
     {
         var platformLayerMask = ValuesStore.CommonValues.PlatformLayerMask;
 
-        return IsInfrontOf(boundsCollider, platformLayerMask, 0.02f, Vector2.up, Vector2.down);
+        return IsInfrontOf(boundsCollider, platformLayerMask, 0.001f, Vector2.up, Vector2.down);
     }
 
     private static bool IsInfrontOf(Bounds boundsCollider, LayerMask layerMask, float distance, Vector2 firstDirection, Vector2 secondDirection)

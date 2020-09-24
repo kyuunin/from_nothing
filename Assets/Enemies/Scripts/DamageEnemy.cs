@@ -1,17 +1,17 @@
 ﻿using UnityEngine;
 
-public class DamageEnemy: MonoBehaviour
+public class DamageEnemy : MonoBehaviour
 {
     [SerializeField]
     private int life;
 
-    public void TakeDamage(int damage)
+    public virtual void TakeDamage(int damage, AttackType attackType)
     {
         life -= damage;
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (life <= 0)
             Destroy(gameObject);

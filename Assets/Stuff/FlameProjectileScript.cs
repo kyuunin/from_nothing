@@ -21,7 +21,7 @@ public class FlameProjectileScript : MonoBehaviour
         //deal damage
         var enemy = collision.gameObject.GetComponent<DamageEnemy>();
         if (enemy != null)
-            enemy.TakeDamage(damage);
+            enemy.TakeDamage(damage, AttackType.Fire);
     }
 
     void Update()
