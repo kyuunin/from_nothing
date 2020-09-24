@@ -15,7 +15,7 @@ public class BombProjectileScript : MonoBehaviour
     {
         timer = DateTime.Now;
         _dannyDirection = CommonValuesStore.CommonValues.DannyDirection ? 1 : -1;
-        radius = GetComponent<CircleCollider2D>().radius*3;
+        radius = GetComponent<CircleCollider2D>().radius*2;
     }
 
     //destroy projectile and calc damage
