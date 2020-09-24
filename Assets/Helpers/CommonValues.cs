@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class CommonValues : MonoBehaviour
 {
@@ -16,4 +17,6 @@ public class CommonValues : MonoBehaviour
     public Collider2D ColliderOfPlayer;
     public bool duringFlameAttack;
     public int GroundCollapseTiem;
+    public int LivesOfPlayer { get; set; } = DamageValues.DefaultLivesOfPlayer;
+    public DateTime? PlayerIsSafeStartTime { get; set; } = null;
 }

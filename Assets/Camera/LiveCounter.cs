@@ -11,7 +11,7 @@ public class LiveCounter : MonoBehaviour
     {
         var activeHearts = Hearts
             .Select((x, i) => new { Heart = x, Index = i })
-            .Where(x => x.Index < DamageValues.LivesOfPlayer)
+            .Where(x => x.Index < ValuesStore.CommonValues.LivesOfPlayer)
             .ToList();
 
         activeHearts
@@ -19,7 +19,7 @@ public class LiveCounter : MonoBehaviour
 
         var inactiveHearts = Hearts
             .Select((x, i) => new { Heart = x, Index = i })
-            .Where(x => x.Index >= DamageValues.LivesOfPlayer)
+            .Where(x => x.Index >= ValuesStore.CommonValues.LivesOfPlayer)
             .ToList();
 
         inactiveHearts

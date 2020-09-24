@@ -32,16 +32,16 @@ public class MineScript : MonoBehaviour
             //selfdestruct
             explodedTimer = DateTime.Now;
             //player takes damage
-            if (DamageValues.PlayerIsSafeStartTime.HasValue
-                && (DateTime.Now - DamageValues.PlayerIsSafeStartTime.Value) < DamageValues.PlayerIsSafeTimeSpan)
+            if (ValuesStore.CommonValues.PlayerIsSafeStartTime.HasValue
+                && (DateTime.Now - ValuesStore.CommonValues.PlayerIsSafeStartTime.Value) < DamageValues.PlayerIsSafeTimeSpan)
                 return;
 
-            DamageValues.PlayerIsSafeStartTime = DateTime.Now;
+            ValuesStore.CommonValues.PlayerIsSafeStartTime = DateTime.Now;
 
-            DamageValues.LivesOfPlayer -= damage;
+            ValuesStore.CommonValues.LivesOfPlayer -= damage;
 
-            if (DamageValues.LivesOfPlayer <= 0)
-                Destroy(ValuesStore.Player);
+            if (ValuesStore.CommonValues.LivesOfPlayer <= 0)
+                ValuesStore.Manager.Reload();
 
             //damage enemies too
             var enemy = collision.gameObject.GetComponent<DamageEnemy>();

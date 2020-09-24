@@ -14,16 +14,16 @@ public class DamagePlayer : MonoBehaviour
         if (!_isInPlayerCollision)
             return;
 
-        if (DamageValues.PlayerIsSafeStartTime.HasValue
-            && (DateTime.Now - DamageValues.PlayerIsSafeStartTime.Value) < DamageValues.PlayerIsSafeTimeSpan)
+        if (ValuesStore.CommonValues.PlayerIsSafeStartTime.HasValue
+            && (DateTime.Now - ValuesStore.CommonValues.PlayerIsSafeStartTime.Value) < DamageValues.PlayerIsSafeTimeSpan)
             return;
 
-        DamageValues.PlayerIsSafeStartTime = DateTime.Now;
+        ValuesStore.CommonValues.PlayerIsSafeStartTime = DateTime.Now;
 
-        DamageValues.LivesOfPlayer-=Damage;
+        ValuesStore.CommonValues.LivesOfPlayer-=Damage;
 
-        if (DamageValues.LivesOfPlayer <= 0)
-            Destroy(Player);
+        if (ValuesStore.CommonValues.LivesOfPlayer <= 0)
+            ValuesStore.Manager.Reload();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
