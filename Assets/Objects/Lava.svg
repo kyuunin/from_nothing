@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:export-filename="C:\Users\Peter Auto\Documents\git\2020_01_03\from_nothing\Assets\Data\empty.png"
+   inkscape:export-xdpi="0.085521884"
+   inkscape:export-ydpi="0.085521884"
+   sodipodi:docname="Lava.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+  <defs
+     id="defs2">
+    <filter
+       inkscape:label="Gold Paste"
+       x="-0.25"
+       y="-0.25"
+       height="1.5"
+       width="1.5"
+       inkscape:menu="Materials"
+       inkscape:menu-tooltip="Fat pasted cast metal, with golden highlights"
+       style="color-interpolation-filters:sRGB;"
+       id="filter1003">
+      <feGaussianBlur
+         in="SourceAlpha"
+         stdDeviation="0.01"
+         result="result91"
+         id="feGaussianBlur973" />
+      <feComposite
+         result="fbSourceGraphic"
+         operator="in"
+         in="SourceGraphic"
+         in2="result91"
+         id="feComposite975" />
+      <feGaussianBlur
+         result="result1"
+         in="fbSourceGraphic"
+         stdDeviation="0.01"
+         id="feGaussianBlur977" />
+      <feTurbulence
+         result="result0"
+         numOctaves="4"
+         baseFrequency="0.04"
+         type="fractalNoise"
+         seed="20"
+         id="feTurbulence979" />
+      <feDisplacementMap
+         result="result2"
+         scale="30"
+         yChannelSelector="G"
+         xChannelSelector="R"
+         in="result1"
+         in2="result0"
+         id="feDisplacementMap981" />
+      <feColorMatrix
+         type="saturate"
+         values="1"
+         result="result3"
+         id="feColorMatrix983" />
+      <feGaussianBlur
+         result="result4"
+         in="fbSourceGraphic"
+         stdDeviation="0.01"
+         id="feGaussianBlur985" />
+      <feComposite
+         operator="atop"
+         result="fbSourceGraphic"
+         in="result4"
+         in2="result3"
+         id="feComposite987" />
+      <feGaussianBlur
+         result="result0"
+         in="fbSourceGraphic"
+         stdDeviation="1.5"
+         id="feGaussianBlur989" />
+      <feTurbulence
+         baseFrequency="0.02"
+         seed="20"
+         numOctaves="8"
+         result="result1"
+         type="fractalNoise"
+         id="feTurbulence991" />
+      <feComposite
+         result="result2"
+         operator="out"
+         in2="result1"
+         in="result0"
+         id="feComposite993" />
+      <feSpecularLighting
+         lighting-color="rgb(223,188,16)"
+         surfaceScale="2.5"
+         result="result4"
+         specularConstant="2"
+         specularExponent="30"
+         in="result2"
+         id="feSpecularLighting997">
+        <feDistantLight
+           elevation="62"
+           azimuth="225"
+           id="feDistantLight995" />
+      </feSpecularLighting>
+      <feComposite
+         in2="result2"
+         in="result4"
+         operator="atop"
+         result="result92"
+         id="feComposite999" />
+      <feBlend
+         mode="multiply"
+         in2="result92"
+         id="feBlend1001" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="-224.28571"
+     inkscape:cy="560"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1280"
+     inkscape:window-height="658"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:11.04088688;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1005"
+       width="100"
+       height="100"
+       x="0"
+       y="197" />
+    <rect
+       style="fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:9.83526993;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter1003)"
+       id="rect815"
+       width="100"
+       height="100"
+       x="0"
+       y="197" />
+  </g>
+</svg>
