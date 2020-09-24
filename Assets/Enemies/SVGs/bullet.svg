@@ -31,11 +31,11 @@
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1920"
+     inkscape:window-width="960"
      inkscape:window-height="1017"
-     inkscape:window-x="-8"
+     inkscape:window-x="952"
      inkscape:window-y="-8"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="0" />
   <metadata
      id="metadata1919">
     <rdf:RDF>
@@ -53,7 +53,10 @@
      inkscape:groupmode="layer"
      id="layer1">
     <g
-       id="g2473">
+       id="g2473"
+       inkscape:export-filename="C:\Dev\OwnProjects\from_nothing\Assets\Enemies\SVG_Pictures\bullet.png"
+       inkscape:export-xdpi="7.5148396"
+       inkscape:export-ydpi="7.5148396">
       <rect
          y="114.15402"
          x="24.814138"

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class PatrolInAir : MonoBehaviour
+public class PatrolInAirUpAndDownThroughPlayer : MonoBehaviour
 {
     [SerializeField]
     private float Speed;
@@ -20,9 +20,9 @@ public class PatrolInAir : MonoBehaviour
     {
         var boundsOfEnemyCollider = GetComponent<Collider2D>().bounds;
 
-        if (Utilities.IsInfrontOfAWall(boundsOfEnemyCollider))
+        if (Utilities.IsAtTheGroundOrAtTheRoof(boundsOfEnemyCollider))
             _direction *= -1;
 
-        GetComponent<Rigidbody2D>().velocity = new Vector2(_direction * Speed, 0);
+        GetComponent<Rigidbody2D>().velocity = new Vector2(0, _direction * Speed);
     }
 }
