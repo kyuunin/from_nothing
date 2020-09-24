@@ -20,7 +20,6 @@ GameObject:
   - component: {fileID: 196876985}
   - component: {fileID: 196876987}
   - component: {fileID: 196876988}
-  - component: {fileID: 196876989}
   - component: {fileID: 196876977}
   - component: {fileID: 6218702710075273548}
   - component: {fileID: 6719919804284376528}
@@ -41,7 +40,7 @@ Transform:
   m_GameObject: {fileID: 4917904156469575291}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.41, y: 1.4, z: 0}
-  m_LocalScale: {x: 0.093341365, y: 0.09334137, z: 1}
+  m_LocalScale: {x: 0.10070243, y: 0.10112574, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -179,7 +178,7 @@ MonoBehaviour:
     m_Bits: 256
   PlayerLayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   ColliderOfPlayer: {fileID: 196876977}
   duringFlameAttack: 0
 --- !u!114 &196876976
@@ -248,18 +247,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooldown: 300
   projectile: {fileID: 7428395153352802273, guid: 64e9e002cf888994ea6bbb1ea1dd0030, type: 3}
---- !u!114 &196876989
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4917904156469575291}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97508275a1fadfd42a1bd637a4d81729, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &196876977
 BoxCollider2D:
   m_ObjectHideFlags: 0

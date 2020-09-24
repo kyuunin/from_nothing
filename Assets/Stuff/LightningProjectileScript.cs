@@ -26,7 +26,7 @@ public class LightningProjectileScript : MonoBehaviour
     void Update()
     {
         //follow player
-        transform.position=CommonValuesStore.CommonValues.ColliderOfPlayer.bounds.center + new Vector3(0.03f, 0.16f, 0);
+        transform.position=ValuesStore.CommonValues.ColliderOfPlayer.bounds.center + new Vector3(0.03f, 0.16f, 0);
         //destroy at end of duration
         if ((DateTime.Now - timer).Value.TotalMilliseconds > lifeTime)
         {

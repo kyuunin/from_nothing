@@ -14,7 +14,7 @@ public class DoubleJump : MonoBehaviour
             jumpStarted = false;
             commonValues.DannyDoubleD = false;
         }
-        if (commonValues.inDash || CommonValuesStore.CommonValues.duringFlameAttack)
+        if (commonValues.inDash || ValuesStore.CommonValues.duringFlameAttack)
             return;
         //jump Started
         if (!jumpStarted && Input.GetButtonDown("Vertical") && !Utilities.IsGrounded())

@@ -12,7 +12,7 @@ public class FlameProjectileScript : MonoBehaviour
     private void Start()
     {
         timer = DateTime.Now;
-        CommonValuesStore.CommonValues.duringFlameAttack = true;
+        ValuesStore.CommonValues.duringFlameAttack = true;
     }
 
     //deal damage ONCE
@@ -27,7 +27,7 @@ public class FlameProjectileScript : MonoBehaviour
     void Update()
     {
         if ((DateTime.Now - timer).Value.TotalMilliseconds > lifeTime) {
-            CommonValuesStore.CommonValues.duringFlameAttack = false;
+            ValuesStore.CommonValues.duringFlameAttack = false;
             Destroy(gameObject);
         }
     }

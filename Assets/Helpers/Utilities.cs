@@ -4,14 +4,14 @@ public static class Utilities {
 
     public static bool IsGrounded()
     {
-        var boundsOfPlayerCollider = CommonValuesStore.CommonValues.ColliderOfPlayer.bounds;
+        var boundsOfPlayerCollider = ValuesStore.CommonValues.ColliderOfPlayer.bounds;
 
         return IsGrounded(boundsOfPlayerCollider);
     }
 
     public static bool IsGrounded(Bounds boundsCollider)
     {
-        var platformLayerMask = CommonValuesStore.CommonValues.PlatformLayerMask;
+        var platformLayerMask = ValuesStore.CommonValues.PlatformLayerMask;
 
         var raycastHit2d = Physics2D.BoxCast(boundsCollider.center, boundsCollider.size, 0f, Vector2.down, .1f, platformLayerMask);
 
@@ -20,7 +20,7 @@ public static class Utilities {
 
     public static bool IsInfrontOfAWall(Bounds boundsCollider)
     {
-        var platformLayerMask = CommonValuesStore.CommonValues.PlatformLayerMask;
+        var platformLayerMask = ValuesStore.CommonValues.PlatformLayerMask;
 
         return IsInfrontOf(boundsCollider, platformLayerMask, 0.02f);
     }

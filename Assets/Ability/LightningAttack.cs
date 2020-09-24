@@ -17,7 +17,7 @@ public class LightningAttack : MonoBehaviour
         //Jot Dora
         if (isInputAggressive)
         {
-            Instantiate(projectile, CommonValuesStore.CommonValues.RigidBodyOfPlayer.transform.position + new Vector3(0.03f, 0.16f, 0), Quaternion.identity);
+            Instantiate(projectile, ValuesStore.CommonValues.RigidBodyOfPlayer.transform.position + new Vector3(0.03f, 0.16f, 0), Quaternion.identity);
      timer = DateTime.Now;
         }
     }

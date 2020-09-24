@@ -20,7 +20,7 @@ public class projectiledotexe : MonoBehaviour
 
     private void Start()
     {
-        _dannyDirection = CommonValuesStore.CommonValues.DannyDirection ? 1 : -1;
+        _dannyDirection = ValuesStore.CommonValues.DannyDirection ? 1 : -1;
     }
 
     // shoot it, bop it, drop it

@@ -13,7 +13,7 @@ public class Dash : MonoBehaviour
         var commonValues = transform.GetComponent<CommonValues>();
         var isInputDash = Input.GetAxisRaw("Dash") > 0.1;
         var isInputHorizontal = Input.GetAxisRaw("Horizontal");
-        if (CommonValuesStore.CommonValues.duringFlameAttack)
+        if (ValuesStore.CommonValues.duringFlameAttack)
             return;
 
         //start dash

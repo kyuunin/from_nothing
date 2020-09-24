@@ -39,11 +39,11 @@ public class BombThrow : MonoBehaviour
                 velo *= throwStrength;
             }
             
-            _dannyDirection = CommonValuesStore.CommonValues.DannyDirection ? 1 : -1;
+            _dannyDirection = ValuesStore.CommonValues.DannyDirection ? 1 : -1;
             if (_dannyDirection == -1) {
                 velo.x *= -1;
             }
-            bomb = Instantiate(projectile, CommonValuesStore.CommonValues.RigidBodyOfPlayer.transform.position + new Vector3(_dannyDirection * 0.5f, 0.3f, 0), Quaternion.identity);
+            bomb = Instantiate(projectile, ValuesStore.CommonValues.RigidBodyOfPlayer.transform.position + new Vector3(_dannyDirection * 0.5f, 0.3f, 0), Quaternion.identity);
             bomb.GetComponent<Rigidbody2D>().velocity = velo;
             timer = DateTime.Now;
         }

@@ -14,7 +14,7 @@ public class BombProjectileScript : MonoBehaviour
     private void Start()
     {
         timer = DateTime.Now;
-        _dannyDirection = CommonValuesStore.CommonValues.DannyDirection ? 1 : -1;
+        _dannyDirection = ValuesStore.CommonValues.DannyDirection ? 1 : -1;
         radius = GetComponent<CircleCollider2D>().radius*3;
     }
 

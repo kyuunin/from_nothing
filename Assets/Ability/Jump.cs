@@ -11,7 +11,7 @@ public class Jump : MonoBehaviour
         var commonValues = transform.GetComponent<CommonValues>();
         var isInputVertical = Input.GetAxisRaw("Vertical")>0.1;
 
-        if (commonValues.inDash || CommonValuesStore.CommonValues.duringFlameAttack)
+        if (commonValues.inDash || ValuesStore.CommonValues.duringFlameAttack)
             return;
 
         //jump Start
