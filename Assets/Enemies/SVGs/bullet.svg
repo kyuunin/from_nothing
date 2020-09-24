@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg1922"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="bullet.svg">
+  <defs
+     id="defs1916" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="448.99359"
+     inkscape:cy="662.0087"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata1919">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g2473">
+      <rect
+         y="114.15402"
+         x="24.814138"
+         height="43.939732"
+         width="49.892857"
+         id="rect2467"
+         style="opacity:1;fill:#000000;fill-opacity:1;stroke-width:1.52350461;stroke-miterlimit:4;stroke-dasharray:none" />
+      <path
+         transform="rotate(90)"
+         d="m 114.15402,-74.272324 a 21.969864,18.142857 0 0 1 21.96987,-18.142856 21.969864,18.142857 0 0 1 21.96986,18.142856 h -21.96986 z"
+         sodipodi:end="0"
+         sodipodi:start="3.1415927"
+         sodipodi:ry="18.142857"
+         sodipodi:rx="21.969864"
+         sodipodi:cy="-74.272324"
+         sodipodi:cx="136.12389"
+         sodipodi:type="arc"
+         id="path2469"
+         style="opacity:1;fill:#000000;fill-opacity:1;stroke-width:1.44255197;stroke-miterlimit:4;stroke-dasharray:none" />
+    </g>
+  </g>
+</svg>

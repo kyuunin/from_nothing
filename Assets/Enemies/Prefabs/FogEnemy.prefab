@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 1688298967}
   - component: {fileID: 1688298969}
   - component: {fileID: 1688298968}
-  - component: {fileID: 7483034486124249871}
   - component: {fileID: 1688298973}
   - component: {fileID: 1688298974}
+  - component: {fileID: 798809156}
   m_Layer: 9
   m_Name: FogEnemy
   m_TagString: Untagged
@@ -148,20 +148,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 1.5
---- !u!114 &7483034486124249871
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8695377548392596259}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce1c0f4ec5766dc40926598c31a0f321, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DurationForNextThrow: 1500
-  PoisonousFogProjectilePrefab: {fileID: 8687002736940470597, guid: b4301d9a905a1f54cb0249f00118b0f1, type: 3}
 --- !u!114 &1688298973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,3 +174,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 3
+--- !u!114 &798809156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8695377548392596259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ba1a5b8050d2cf4d94bb62448bb6022, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DurationForNextThrow: 1000
+  ProjectilePrefab: {fileID: 8687002736940470597, guid: b4301d9a905a1f54cb0249f00118b0f1, type: 3}
