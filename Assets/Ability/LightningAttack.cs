@@ -8,7 +8,6 @@ public class LightningAttack : MonoBehaviour
 
     [SerializeField]
     private GameObject projectile;
-    private int _dannyDirection;
 
     void Update()
     {
@@ -18,13 +17,8 @@ public class LightningAttack : MonoBehaviour
         //Jot Dora
         if (isInputAggressive)
         {
-            _dannyDirection = CommonValuesStore.CommonValues.DannyDirection ? 1 : -1;
-            if (_dannyDirection == -1)
-                Instantiate(projectile, CommonValuesStore.CommonValues.RigidBodyOfPlayer.transform.position + new Vector3(_dannyDirection * 0.7f, 0, 0), new Quaternion(0, 180, 0, 0));
-
-            else
-                Instantiate(projectile, CommonValuesStore.CommonValues.RigidBodyOfPlayer.transform.position + new Vector3(_dannyDirection * 0.7f, 0, 0), Quaternion.identity);
-            timer = DateTime.Now;
+            Instantiate(projectile, CommonValuesStore.CommonValues.RigidBodyOfPlayer.transform.position + new Vector3(0.03f, 0.16f, 0), Quaternion.identity);
+     timer = DateTime.Now;
         }
     }
 }

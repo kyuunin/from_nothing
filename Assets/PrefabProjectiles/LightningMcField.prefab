@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 8314151762182910759}
   - component: {fileID: 8314151762182910744}
   - component: {fileID: 8314151762182910747}
-  - component: {fileID: 5146892605013274168}
   - component: {fileID: -8311224915561525580}
+  - component: {fileID: 3920672749861617612}
   m_Layer: 0
   m_Name: LightningMcField
   m_TagString: Untagged
@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8314151762182910748}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.5557, y: -2.5564, z: -4.9480343}
-  m_LocalScale: {x: 1.4587495, y: 1.580093, z: 1}
+  m_LocalPosition: {x: -5.288, y: -3.202, z: -4.9480343}
+  m_LocalScale: {x: 0.7304247, y: 0.7012564, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c49c9e13500a7c3419a6cfdf798ce3f4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 462fbfa10b994294d9531c2075a0d845, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -106,22 +106,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!70 &5146892605013274168
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8314151762182910748}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.7, y: 0.1}
-  m_Direction: 1
 --- !u!114 &-8311224915561525580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,4 +119,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 2
-  lifeTime: 1500
+  lifeTime: 2500
+--- !u!58 &3920672749861617612
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8314151762182910748}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.03, y: -0.2}
+  serializedVersion: 2
+  m_Radius: 0.75
