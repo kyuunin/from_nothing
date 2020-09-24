@@ -51,6 +51,6 @@ public class Manager : MonoBehaviour
     private void UpdateValuesStore()
     {
         ValuesStore.CommonValues = _active.GetComponentInChildren<CommonValues>();
-        ValuesStore.Player = GameObject.Find("Player");
+        ValuesStore.Player = ValuesStore.CommonValues.gameObject;
     }
 }

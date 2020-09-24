@@ -27,6 +27,7 @@ public class DamagePlayer : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+    
         _isInPlayerCollision = collision.gameObject == ValuesStore.Player;
     }
 
