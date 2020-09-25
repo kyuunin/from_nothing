@@ -23,7 +23,7 @@ public class Flame : MonoBehaviour
         //Jot Dora
         if (isInputAggressive)
         {
-            if (!Utilities.IsGrounded())
+            if (!Utilities.IsGroundedForPlayer())
                 return;
             ValuesStore.CommonValues.RigidBodyOfPlayer.velocity = new Vector2(0, 0);
             _dannyDirection = ValuesStore.CommonValues.DannyDirection ? 1 : -1;

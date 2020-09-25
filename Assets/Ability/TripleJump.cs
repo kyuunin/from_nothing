@@ -7,16 +7,11 @@ public class TripleJump : MonoBehaviour
     private bool jumpStarted;
     private DateTime? timer = null;
 
-    private bool isGrounded()
-    {
-        var commonValues = transform.GetComponent<CommonValues>();
-        return Utilities.IsGrounded();
-    }
 
     void Update()
     {
         var commonValues = transform.GetComponent<CommonValues>();
-        if (isGrounded()) //reset jump
+        if (Utilities.IsGroundedForPlayer()) //reset jump
         {
             jumpStarted = false;
             timer = null;
@@ -32,7 +27,7 @@ public class TripleJump : MonoBehaviour
         {
             return;
         } //jump Started
-        else if (Input.GetButtonDown("Vertical") && timer.HasValue && !jumpStarted && commonValues.DannyDoubleD &&  !isGrounded())
+        else if (Input.GetButtonDown("Vertical") && timer.HasValue && !jumpStarted && commonValues.DannyDoubleD &&  !Utilities.IsGroundedForPlayer())
         {
             jumpStarted = true;
             var tmp = commonValues.RigidBodyOfPlayer.velocity;
