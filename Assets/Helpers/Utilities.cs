@@ -8,7 +8,7 @@ public static class Utilities {
 
         var platformLayerMask = ValuesStore.CommonValues.PlatformLayerMask;
 
-        var raycastHit2d = Physics2D.CircleCast(circleColliderOfPlayer.bounds.center, circleColliderOfPlayer.radius / 4, Vector2.down, 0.001f, platformLayerMask);
+        var raycastHit2d = Physics2D.BoxCast(circleColliderOfPlayer.bounds.center, Vector2.one * 0.3f, 0f, Vector2.down, 0.1f, platformLayerMask);
 
         return raycastHit2d.collider != null;
     }
