@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15eecacc9fe387f4182dbba57f4c2795, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Door: {fileID: 7876655463395538945}
+  Door: {fileID: 7876655463395538972}
   AttackName: LightningProjectileScript
 --- !u!114 &7876655463395538945
 MonoBehaviour:

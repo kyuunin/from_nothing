@@ -138,5 +138,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15eecacc9fe387f4182dbba57f4c2795, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Door: {fileID: 7930680541571671509}
+  Door: {fileID: 7930680541571671510}
   AttackName: BombProjectileScript

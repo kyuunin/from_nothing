@@ -2,24 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoorOpener : MonoBehaviour
+public class DoorOpener : MonoBehaviour, IDoor
 {
     public Sprite ClosedSprite;
     public Sprite OpenSprite;
     public bool IsOpen = false;
     private SpriteRenderer render = null;
-    private BoxCollider2D collider = null;
+    private BoxCollider2D col = null;
     // Start is called before the first frame update
     void Start()
     {
-        collider = GetComponent<BoxCollider2D>();
+        col = GetComponent<BoxCollider2D>();
         render = GetComponent<SpriteRenderer>();
         render.sprite = IsOpen ? OpenSprite : ClosedSprite;
-        collider.enabled = !IsOpen;
+        col.enabled = !IsOpen;
     }
     public virtual void SetOpen(bool open) {
         IsOpen = open;
         render.sprite = IsOpen ? OpenSprite : ClosedSprite;
-        collider.enabled = !IsOpen;
+        col.enabled = !IsOpen;
     }
 }

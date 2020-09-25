@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18aa82c03b19b7f408806530441bb609, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Door: {fileID: 0}
+  Door: {fileID: 4490892826111923865}
 --- !u!114 &4490892826111923863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18aa82c03b19b7f408806530441bb609, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Door: {fileID: 4490892826111923860}
+  Door: {fileID: 0}
 --- !u!114 &4490892826111923860
 MonoBehaviour:
   m_ObjectHideFlags: 0
