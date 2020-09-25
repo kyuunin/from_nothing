@@ -15,7 +15,7 @@ public class Jump : MonoBehaviour
             return;
 
         //jump Start
-        if (isInputVertical && timer.HasValue && Utilities.IsGrounded())
+        if (isInputVertical && timer.HasValue && Utilities.IsGroundedForPlayer())
         {
             jumpStarted = true;
             var tmp = commonValues.RigidBodyOfPlayer.velocity;
@@ -26,7 +26,7 @@ public class Jump : MonoBehaviour
         {
             commonValues.RigidBodyOfPlayer.AddForce(new Vector2(0, commonValues.JumpAcceleration));
         }//reset jump
-        else if (!timer.HasValue && Utilities.IsGrounded())
+        else if (!timer.HasValue && Utilities.IsGroundedForPlayer())
         {
             timer = DateTime.Now;
             jumpStarted = false;

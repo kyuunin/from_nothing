@@ -9,7 +9,7 @@ public class DoubleJump : MonoBehaviour
     void Update()
     {
         var commonValues = transform.GetComponent<CommonValues>();
-        if (Utilities.IsGrounded()) //reset jump
+        if (Utilities.IsGroundedForPlayer()) //reset jump
         {
             jumpStarted = false;
             commonValues.DannyDoubleD = false;
@@ -17,7 +17,7 @@ public class DoubleJump : MonoBehaviour
         if (commonValues.inDash || ValuesStore.CommonValues.duringFlameAttack)
             return;
         //jump Started
-        if (!jumpStarted && Input.GetButtonDown("Vertical") && !Utilities.IsGrounded())
+        if (!jumpStarted && Input.GetButtonDown("Vertical") && !Utilities.IsGroundedForPlayer())
         {
             jumpStarted = true;
             commonValues.DannyDoubleD = true;
