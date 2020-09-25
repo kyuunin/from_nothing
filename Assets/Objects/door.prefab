@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ClosedSprite: {fileID: 21300000, guid: 98dfe14e065f1d045be24a9e39c43cce, type: 3}
   OpenSprite: {fileID: 21300000, guid: c5346a6654e392d43b745dc245f84d94, type: 3}
-  IsOpen: 1
+  IsOpen: 0
 --- !u!212 &4569924272067539340
 SpriteRenderer:
   m_ObjectHideFlags: 0
